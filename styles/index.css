@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  /* Remove unwanted whitespace around elements */
+  margin: 0;
+  padding: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  /* Variables */
+  --size: 250px;
+  --border-radius: 10px;
+}
+
+h1 {
+  font-weight: 600; /* Set default to semi-bold (Default: 700) */
+  text-align: center; /* Set default to center text */
+  margin: 25px 0; /* Set default to 25px vertical whitespace */
+}
+
+hr {
+  margin-top: 50px; /* Set default to 50px whitespace on top of element */
+}
+
+.main-container {
+  width: 80vw; /* View width of 80% */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Question 1 */
+.q1-container {
+  /* Center elements of container */
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+#width-box,
+#height-box {
+  aspect-ratio: 2/1; /* Width to Height ratio of 2 / 1 */
+  width: var(--size);
+  border: 2px solid black;
+  border-radius: var(--border-radius); /* Smooth corners */
+  transition: 200ms background-color; /* Transition when background-color changes */
+
+  /* Center the text inside the boxes */
+  display: grid;
+  place-items: center;
+}
+
+#width-box:hover,
+#height-box:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#width-box {
+  margin-right: 10px; /* 10px of whitespace to the right of width-box */
+}
+
+/* Question 2 & 3 */
+#color-box,
+#color-box-async {
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--border-radius);
+  margin: 0 auto; /* Center the div horizontally */
+  transition: 1s background-color; /* Transition of 1s when background-color changes */
+}
+
+/* Question 4 */
+.top-tv-shows {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.top-1,
+.top-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2.5px;
+  width: var(--size);
+  border-radius: var(--border-radius);
+}
+
+.top-1 .number-1,
+.top-2 .number-2 {
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.top-1 .rating,
+.top-2 .rating {
+  text-align: center;
+  font-size: 30px;
+  height: 50px;
+  width: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 100%;
+  margin-bottom: 5px;
+}
+
+.top-1 .movie,
+.top-2 .movie {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.top-1 .movie-ratings,
+.top-2 .movie-ratings {
+  margin-top: -5px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+table {
+  width: 500px;
+  margin: 0 auto; /* Center the table horizontally */
+  margin-bottom: 50px;
+  border-spacing: 0 5px; /* Remove gap between cells and create gap underneath */
+}
+
+table thead tr {
+  text-align: left;
+}
+
+table tbody tr {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+table tbody tr td:first-of-type {
+  padding-left: 10px;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+table tbody tr td:last-of-type {
+  padding-right: 10px;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+table tbody tr {
+  height: 50px;
+  margin-top: 10px;
+}
